@@ -6,3 +6,6 @@ crash.log
 
 # For built boxes
 *.box
+
+# Scripts for running packer
+*.sh
