@@ -47,14 +47,17 @@
                 "java -version",
 
                 "# 3. Install Tomcat 9",
-                "sudo apt update",
+                "# sudo apt update",
                 "sudo apt install tomcat9 tomcat9-admin -y",
 
-                "# 4. Install Postgresql",
-                "sudo apt-get update",
+                "# 4. Install Maven",
+                "sudo apt install maven -y",
+
+                "# 5. Install Postgresql",
+                "# sudo apt-get update",
                 "sudo apt-get -y install postgresql -y",
 
-                "# 5. Upgrade",
+                "# 6. Upgrade",
                 "sudo apt-get upgrade -y"
             ]
         }
