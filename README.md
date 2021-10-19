@@ -92,8 +92,9 @@ Things to remember:
 --> Next
 
 1. Security Group:
-    Http -> Anywhere
-    SSH  -> Anywhere
+    Http -> Anywhere Ipv4
+    SSH  -> Anywhere Ipv4
+    Custom TCP -> 8080 -> Anywhere Ipv4
 
 --> Next
 
@@ -112,12 +113,15 @@ Things to remember:
 # exit
 ```
 
-### 3. Run Webapp from EC2 instance
+### 3. Demo Webapp from EC2 instance
 
 1. Generate Executable WAR of webapp
 
 ```
 # cd /home/varad/Desktop/NSC/Github/webapp/project
+
+# export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+# export PATH=$JAVA_HOME/bin:$PATH
 
 # mvn clean install
 ```
@@ -202,12 +206,18 @@ http://<Public_Ipv4_address>:8080/v1/user
     "account_updated": "2021-10-06T17:07:29.776Z"
 }
 ```
-After getting the response, open the database and execute the following query. Then showcase that 
+After getting the response, open the database and execute the following query. Then show that 
 1. Password is encrypted
 2. id, account_created and account_updated fields are getting populated automatically.
 
+*Do the following in New terminal window:*
 ```
-SELECT * FROM "user";
+# ssh -i  ~/.ssh/aws_prod_ssh_key ubuntu@<Public_Ipv4_address>
+# sudo su postgres
+# psql
+# \l
+# \c rdb
+# SELECT * FROM "user";
 ```
 
 2.4. Click on send once more, Response to expect.
@@ -343,3 +353,21 @@ Response to expect:
 You cannot update fields other than Firstname, Lastname and Password.
 ``` 
 
+### 4. Do Cleanup
+ - Go to Terminal
+ - Press Ctrl + C, to close webapp
+ - Then execute the following command
+```
+# exit
+```
+- Further, go to AWS console and do the following:
+  - Terminate Instance
+  - Delete security group
+  - Then execute the following commands in terminal
+```
+# cd /home/varad/Desktop/NSC/Github/infrastructure
+
+# terraform destroy
+
+# export AWS_PROFILE=
+```
