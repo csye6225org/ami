@@ -72,7 +72,7 @@ https://github.com/csye6225org/ami
 ```
 # cd /home/varad/Desktop/NSC/Github/ami
 
-# ./build.sh
+# ./buildAmi.sh
 ```
 
 4. Launch EC2 instance
