@@ -39,13 +39,13 @@ https://github.com/csye6225org/ami
 ```
 # cd /home/varad/Desktop/NSC
 
-# cd Github/webapp/
+# cd /home/varad/Desktop/NSC/Github/webapp/
 # git remote -v
 
-# cd Github/infrastructure/
+# cd /home/varad/Desktop/NSC/Github/infrastructure/
 # git remote -v
 
-# cd Github/ami/
+# cd /home/varad/Desktop/NSC/Github/ami/
 # git remote -v
 ```
 
