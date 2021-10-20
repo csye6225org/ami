@@ -5,9 +5,9 @@ Amazon Machine Image
 
 # Techstack
 ```
-Amazon Web Services
-Hashicorp Packer
-JSON
+1. Amazon Web Services
+2. Hashicorp Packer
+3. JSON
 ```
 
 ## Assignment 3: How to Demo?
