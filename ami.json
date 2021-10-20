@@ -5,7 +5,6 @@
         "aws_region": "",
         "subnet_id": "",
         "source_ami": "",
-        "ami_users": "932810236031",
         "ssh_username": "ubuntu"
     },
     "builders": [
@@ -38,26 +37,34 @@
                 "FOO=foo"
             ],
             "inline": [
-                "# 1. Install Apache 2",
-                "sudo add-apt-repository ppa:openjdk-r/ppa",
+                "# 1. this will prevent warnings/errors about",
+                "# running in non-interactive mode",
+                "DEBIAN_FRONTEND=noninteractive",
+
+                "# 2. Update and Upgrade",
                 "sudo apt-get update",
+                "sudo apt-get -qy upgrade",
+
+                "# 3. Install Apache 2",
+                "sudo add-apt-repository ppa:openjdk-r/ppa",
                 "sudo apt-get install apache2 -y",
 
-                "# 2. Install Java 11",
+                "# 4. Install Java 11",
                 "sudo apt-get install -y openjdk-11-jdk",
                 "java -version",
 
-                "# 3. Install Tomcat 9",
+                "# 5. Install Tomcat 9",
                 "sudo apt install tomcat9 tomcat9-admin -y",
 
-                "# 4. Install Maven",
+                "# 6. Install Maven",
                 "sudo apt install maven -y",
 
-                "# 5. Install Postgresql",
+                "# 7. Install Postgresql",
                 "sudo apt-get -y install postgresql -y",
 
-                "# 6. Upgrade",
-                "sudo apt-get upgrade -y"
+                "# 8. Clean at the end",
+                "sudo apt-get clean",
+                "sudo rm -rf /var/lib/apt/lists/*"
             ]
         }
     ]

@@ -336,10 +336,12 @@ Invalid Password
 4.4. Showcase handling update to fields other than firstname, lastname, password. 
 ```
 {
-    "first_name": "Varad",
+    "first_name": "Gargi Ratnakar",
     "last_name": "Desai",
-    "username": "varad@gmail.com",
+    "password": "Gargi@123",
+    "username": "gargi@gmail.com",
     "account_created": "2021-10-06T17:07:29.776Z"
+
 }
 
 Utility strings:  
