@@ -1,6 +1,6 @@
 # AMI 
 ```
-Amazon Machine Language
+Amazon Machine Image
 ```
 
 # Techstack
