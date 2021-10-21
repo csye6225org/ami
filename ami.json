@@ -37,32 +37,37 @@
                 "FOO=foo"
             ],
             "inline": [
-                "# 1. this will prevent warnings/errors about",
+
+                "# 1. Clean at the start",
+                "sudo apt-get clean",
+                "sudo rm -rf /var/lib/apt/lists/*",
+
+                "# 2. this will prevent warnings/errors about",
                 "# running in non-interactive mode",
                 "DEBIAN_FRONTEND=noninteractive",
 
-                "# 2. Update and Upgrade",
+                "# 3. Update and Upgrade",
                 "sudo apt-get update",
                 "sudo apt-get -qy upgrade",
 
-                "# 3. Install Apache 2",
+                "# 4. Install Apache 2",
                 "sudo add-apt-repository ppa:openjdk-r/ppa",
                 "sudo apt-get install apache2 -y",
 
-                "# 4. Install Java 11",
+                "# 5. Install Java 11",
                 "sudo apt-get install -y openjdk-11-jdk",
                 "java -version",
 
-                "# 5. Install Tomcat 9",
+                "# 6. Install Tomcat 9",
                 "sudo apt install tomcat9 tomcat9-admin -y",
 
-                "# 6. Install Maven",
+                "# 7. Install Maven",
                 "sudo apt install maven -y",
 
-                "# 7. Install Postgresql",
+                "# 8. Install Postgresql",
                 "sudo apt-get -y install postgresql -y",
 
-                "# 8. Clean at the end",
+                "# 9. Clean at the end",
                 "sudo apt-get clean",
                 "sudo rm -rf /var/lib/apt/lists/*"
             ]
