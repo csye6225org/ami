@@ -5,7 +5,7 @@
         "aws_region": "",
         "subnet_id": "",
         "source_ami": "",
-        "ami_users": "932810236031",
+        "ami_users": "",
         "ssh_username": "ubuntu"
     },
     "builders": [
@@ -60,16 +60,7 @@
                 "sudo apt-get install -y openjdk-11-jdk",
                 "java -version",
 
-                "# 6. Install Tomcat 9",
-                "# sudo apt install tomcat9 tomcat9-admin -y",
-
-                "# 7. Install Maven",
-                "# sudo apt install maven -y",
-
-                "# 8. Install Postgresql",
-                "# sudo apt-get -y install postgresql -y",
-
-                "# 9. Clean at the end",
+                "# 6. Clean at the end",
                 "sudo apt-get clean",
                 "sudo rm -rf /var/lib/apt/lists/*"
             ]
