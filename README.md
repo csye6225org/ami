@@ -13,7 +13,7 @@ Amazon Machine Image
 ## Assignment 4: How to Demo?
 ### 1. Git Demo:
 
-1. Create pull requests between.
+1. Create pull requests between...
 ```
 1. Main branch of organization and assignment branch of fork.
 2. Main branch of organization and main branch of fork.
