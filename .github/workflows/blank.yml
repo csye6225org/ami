@@ -34,3 +34,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Validate Packer Template
+        uses: hashicorp/packer-github-actions@master
+        with:
+          command: validate
+          arguments: -syntax-only # only validate syntax
+          target: ami.json
+        env:
+          PACKER_LOG: 1 # enable debug log for packer
+  
+      - name: Say Hello world
+        run: echo "Hello world!" 
