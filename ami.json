@@ -62,7 +62,9 @@
 
                 "# 6. Clean at the end",
                 "sudo apt-get clean",
-                "sudo rm -rf /var/lib/apt/lists/*"
+                "sudo rm -rf /var/lib/apt/lists/*",
+
+                "echo Hello"
             ]
         }
     ]
