@@ -2,7 +2,7 @@
 ```
 Amazon Machine Image
 ```
-
+...
 # Techstack
 ```
 1. Amazon Web Services
