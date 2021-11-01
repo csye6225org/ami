@@ -31,3 +31,6 @@ jobs:
         target: ami.json
       env:
         PACKER_LOG: 1 # enable debug log for packer
+
+    - name: Say Hello world
+      run: echo "Hello world!" 
