@@ -20,7 +20,14 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout Repository
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
     
-    - name: Hello world
-    - run: echo "Hello world"
+    # Ref: https://github.com/marketplace/actions/packer-github-actions
+    - name: Validate Packer Template
+      uses: hashicorp/packer-github-actions@master
+      with:
+        command: validate
+        arguments: -syntax-only # only validate syntax
+        target: ami.json
+      env:
+        PACKER_LOG: 1 # enable debug log for packer
