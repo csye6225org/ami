@@ -43,5 +43,5 @@ jobs:
 
       # 5. 
       - name: The End
-        run: echo "The End" 
+        run: echo "The End." 
 
