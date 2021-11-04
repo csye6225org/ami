@@ -64,7 +64,7 @@
                 "sudo apt-get clean",
                 "sudo rm -rf /var/lib/apt/lists/*",
 
-                "# 7. Install Codedeploy agent.",
+                "# 7. Install Codedeploy agent...",
                 "sudo apt update",
                 "sudo apt install ruby-full -y",
                 "sudo apt install wget",
