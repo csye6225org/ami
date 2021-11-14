@@ -64,7 +64,7 @@
                 "sudo apt-get clean",
                 "sudo rm -rf /var/lib/apt/lists/*",
 
-                "# 7. Install Codedeploy agent...",
+                "# 7. Install Codedeploy agent",
                 "sudo apt update",
                 "sudo apt install ruby-full -y",
                 "sudo apt install wget",
@@ -73,7 +73,9 @@
                 "chmod +x ./install",
                 "sudo ./install auto > /tmp/logfile",
                 "sudo service codedeploy-agent start",
-                "sudo service codedeploy-agent status"
+                "sudo service codedeploy-agent status",
+
+                "# 8. Install Cloudwatch agent"
             ]
         }
     ]
