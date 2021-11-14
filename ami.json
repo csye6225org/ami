@@ -64,7 +64,7 @@
                 "sudo apt-get clean",
                 "sudo rm -rf /var/lib/apt/lists/*",
 
-                "# 7. Install Codedeploy agent...",
+                "# 7. Install Codedeploy agent",
                 "sudo apt update",
                 "sudo apt install ruby-full -y",
                 "sudo apt install wget",
@@ -73,7 +73,13 @@
                 "chmod +x ./install",
                 "sudo ./install auto > /tmp/logfile",
                 "sudo service codedeploy-agent start",
-                "sudo service codedeploy-agent status"
+                "sudo service codedeploy-agent status",
+
+                "# 8. Install Cloudwatch agent",
+                "wget https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb",
+                "chmod +x ./amazon-cloudwatch-agent.deb",
+                "sudo dpkg -i -E ./amazon-cloudwatch-agent.deb",
+                "sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status"
             ]
         }
     ]
