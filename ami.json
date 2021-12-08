@@ -28,7 +28,7 @@
                     "volume_size": 8,
                     "volume_type": "gp2",
                     "delete_on_termination": true,
-                    "encryption": true
+                    "encrypted": true
                 }
             ]
         }
